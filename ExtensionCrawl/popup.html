@@ -3,17 +3,41 @@
 <head>	
 	<style>
 		body {
-			width: 400px; height: 200px;
+			width: 400px; height: 300px;
+		}
+		.session {
+			width: 300px;
+		}
+		input {
+			float: right;
+		}
+		label {
+			float: left;
 		}
 	</style>
 </head>
 <body>
 	<button id="start-fetch">Start Fetch</button>
 	<button id="stop-fetch">Stop Fetch</button>
-	<input id="price-match" type="number">
 	<br>
-	<p id="status"></p>
-	
+	<div class="session">
+		<h3>BUY SESSION</h3>
+		<label class="label">Price Buy: </label>
+		<input class="input" id="price-buy" type="number">
+		<br>
+		<label>Quantity: </label>
+		<input class="input" id="quantity-buy" type="number">
+	</div>
+	<div class="session">
+		<br>
+		<h3>SELL SESSION</h3>
+		<label class="label">Price Sell: </label>
+		<input class="input" id="price-sell" type="number">
+		<br>
+		<label>Quantity: </label>
+		<input class="input" id="quantity-sell" type="number">
+	</div>
+	<p style="display: inline-block; font-weight: bold" id="status"></p>
 	<script src="popup-script.js"></script>
 </body>
 </html>

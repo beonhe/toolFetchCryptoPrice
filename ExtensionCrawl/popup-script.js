@@ -3,9 +3,11 @@ function fetchCryptoPrice(isStart) {
 	chrome.runtime.sendMessage({
 		src: "popup",
 		isStartFetch: isStart || false,
-		priceMatch: document.getElementById("price-match").innerHTML
+		priceBuy: document.getElementById("price-buy").value,
+		quantityBuy: document.getElementById("quantity-buy").value
 	}, (res) => {
-		document.getElementById("status").innerHTML = 'Done';
+		console.log(res);
+		document.getElementById("status").innerHTML = "Done";
 	});
 }
 
